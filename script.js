@@ -1,53 +1,59 @@
-gsap.from(".hero h1",{
-duration:1.5,
-y:100,
-opacity:0
-});
+// animação ao rolar
 
-gsap.from(".hero p",{
-duration:2,
-opacity:0
-});
+function revelar() {
 
-let water=0;
-let energy=0;
-let co2=0;
+const reveals = document.querySelectorAll('.reveal');
 
-setInterval(()=>{
+reveals.forEach(item => {
 
-if(water<10000) water+=25;
-if(energy<5000) energy+=12;
-if(co2<3000) co2+=8;
+const alturaJanela = window.innerHeight;
 
-document.getElementById("water").innerText=water;
-document.getElementById("energy").innerText=energy;
-document.getElementById("co2").innerText=co2;
+const topo = item.getBoundingClientRect().top;
 
-},20);
-
-new Chart(
-document.getElementById("chart"),
-{
-type:"line",
-data:{
-labels:[
-"Jan","Fev","Mar",
-"Abr","Mai","Jun"
-],
-datasets:[{
-label:"Economia de Água",
-data:[
-200,
-500,
-900,
-1500,
-2500,
-4000
-],
-borderColor:"#52b788",
-backgroundColor:
-"rgba(82,183,136,.3)",
-fill:true
-}]
+if(topo < alturaJanela - 100){
+item.classList.add('active');
 }
+
+});
+
+}
+
+window.addEventListener('scroll', revelar);
+
+revelar();
+
+
+// contador animado
+
+const contadores = document.querySelectorAll('.contador');
+
+contadores.forEach(contador => {
+
+contador.innerText = '0';
+
+const atualizar = () => {
+
+const alvo = +contador.getAttribute('data-target');
+
+const atual = +contador.innerText;
+
+const incremento = alvo / 100;
+
+if(atual < alvo){
+
+contador.innerText =
+`${Math.ceil(atual + incremento)}`;
+
+setTimeout(atualizar,20);
+
+}else{
+
+contador.innerText = alvo;
+
+}
+
+};
+
+atualizar();
+
 });

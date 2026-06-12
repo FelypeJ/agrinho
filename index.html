@@ -1,233 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AgroGuardian 4.0</title>
+<title>Agrinho 2026 - Campo e Cidade Conectados</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="cursor"></div>
-
 <header>
+    <nav>
+        <h1>Agrinho 2026</h1>
 
-<div class="logo">
-🌱 AgroGuardian 4.0
-</div>
-
-<nav>
-
-<a href="#sobre">Sobre</a>
-<a href="#solucao">Solução</a>
-<a href="#dashboard">Dashboard</a>
-<a href="#impacto">Impacto</a>
-<a href="#equipe">Equipe</a>
-
-</nav>
-
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#importancia">Importância</a></li>
+            <li><a href="#dados">Dados</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="inicio">
 
-<div class="overlay"></div>
+    <div class="hero-text">
+        <h2>Campo e Cidade: Uma Conexão que Alimenta o Futuro</h2>
 
-<div class="hero-content">
+        <p>
+            O campo produz, a cidade consome. Juntos construímos um futuro mais sustentável.
+        </p>
 
-<h1>
-AGRO FORTE<br>
-FUTURO SUSTENTÁVEL
-</h1>
-
-<p>
-Robótica Inteligente para Produção Rural Sustentável
-</p>
-
-<a href="#sobre" class="btn">
-Explorar Projeto
-</a>
-
-</div>
+        <a href="#sobre" class="btn">Explorar</a>
+    </div>
 
 </section>
 
-<section id="sobre">
+<section class="section reveal" id="sobre">
 
-<h2>Problema</h2>
+    <h2>Sobre o Projeto</h2>
 
-<div class="grid">
-
-<div class="card">
-💧
-<h3>Desperdício de Água</h3>
-<p>Uso excessivo na irrigação.</p>
-</div>
-
-<div class="card">
-🌡️
-<h3>Controle Climático</h3>
-<p>Dificuldade na gestão de estufas.</p>
-</div>
-
-<div class="card">
-🐄
-<h3>Bem-estar Animal</h3>
-<p>Falta de monitoramento contínuo.</p>
-</div>
-
-<div class="card">
-🚰
-<h3>Qualidade da Água</h3>
-<p>Contaminações afetam produção.</p>
-</div>
-
-</div>
+    <p>
+        Este projeto mostra como o campo e a cidade estão conectados.
+        Tudo o que consumimos diariamente depende do trabalho dos produtores rurais.
+    </p>
 
 </section>
 
-<section id="solucao">
+<section class="cards reveal" id="importancia">
 
-<h2>Nossa Solução</h2>
+    <div class="card">
+        <h3>🌱 Agricultura</h3>
+        <p>Produz alimentos essenciais para a população.</p>
+    </div>
 
-<div class="solution">
+    <div class="card">
+        <h3>🚜 Tecnologia</h3>
+        <p>Máquinas modernas aumentam a produtividade.</p>
+    </div>
 
-<div>
-
-<h3>AgroGuardian 4.0</h3>
-
-<p>
-Plataforma integrada que monitora solo,
-água, estufa e animais utilizando sensores,
-automação e inteligência embarcada.
-</p>
-
-<ul>
-
-<li>✓ Irrigação Inteligente</li>
-<li>✓ Monitoramento Animal</li>
-<li>✓ Controle da Estufa</li>
-<li>✓ Qualidade da Água</li>
-
-</ul>
-
-</div>
-
-<div class="robot">
-
-🤖
-
-</div>
-
-</div>
+    <div class="card">
+        <h3>🏙 Cidade</h3>
+        <p>Transforma e distribui os produtos do campo.</p>
+    </div>
 
 </section>
 
-<section id="dashboard">
+<section class="dados reveal" id="dados">
 
-<h2>Indicadores Ambientais</h2>
+    <h2>Números do Campo</h2>
 
-<div class="stats">
+    <div class="contador-box">
 
-<div class="stat">
-<span id="water">0</span>
-<p>Litros Economizados</p>
-</div>
+        <div>
+            <span class="contador" data-target="100">0</span>
+            <p>% dos alimentos vêm do campo</p>
+        </div>
 
-<div class="stat">
-<span id="energy">0</span>
-<p>kWh Sustentáveis</p>
-</div>
+        <div>
+            <span class="contador" data-target="5000">0</span>
+            <p>Produtores beneficiados</p>
+        </div>
 
-<div class="stat">
-<span id="co2">0</span>
-<p>kg CO₂ Evitados</p>
-</div>
+        <div>
+            <span class="contador" data-target="2026">0</span>
+            <p>Agrinho 2026</p>
+        </div>
 
-</div>
-
-<canvas id="chart"></canvas>
+    </div>
 
 </section>
 
-<section id="impacto">
+<section class="section reveal">
 
-<h2>Impacto do Projeto</h2>
+    <h2>Sustentabilidade</h2>
 
-<div class="grid">
-
-<div class="card">
-🌱 Menor consumo hídrico
-</div>
-
-<div class="card">
-🌎 Produção sustentável
-</div>
-
-<div class="card">
-🐄 Bem-estar animal
-</div>
-
-<div class="card">
-📈 Aumento da produtividade
-</div>
-
-</div>
+    <p>
+        O uso consciente dos recursos naturais garante alimento,
+        preservação ambiental e qualidade de vida para as próximas gerações.
+    </p>
 
 </section>
 
-<section id="timeline">
+<footer id="contato">
 
-<h2>Desenvolvimento</h2>
+    <h3>Agrinho 2026</h3>
 
-<div class="timeline">
-
-<div>Pesquisa</div>
-<div>Planejamento</div>
-<div>Protótipo</div>
-<div>Programação</div>
-<div>Testes</div>
-<div>Resultados</div>
-
-</div>
-
-</section>
-
-<section id="equipe">
-
-<h2>Equipe</h2>
-
-<div class="grid">
-
-<div class="card">Aluno 1</div>
-<div class="card">Aluno 2</div>
-<div class="card">Aluno 3</div>
-<div class="card">Aluno 4</div>
-<div class="card">Professor Orientador</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-Projeto Agrinho 2026
-</p>
+    <p>Projeto desenvolvido para a categoria Front-End Ensino Médio.</p>
 
 </footer>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
